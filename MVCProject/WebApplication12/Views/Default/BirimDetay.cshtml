@@ -1,0 +1,32 @@
+﻿@using WebApplication12.Models
+@model List<Personel>
+@{
+    ViewData["Title"] = "BirimDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+    
+<br />
+<h2>@ViewBag.brmad</h2>
+<br />
+<<table class="table table-borderd">
+    <tr>
+        <th>ID</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.PersonelID</td>
+            <td>@x.Ad</td>
+            <td>@x.Soyad</td>
+            <td>@x.Sehir</td>
+            
+        </tr>
+    }
+
+</table>
